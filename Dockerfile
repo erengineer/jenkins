@@ -57,7 +57,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     mv /ansible/docs $ANSIBLE_HOME/docs && \
     rm -rf /ansible && \
     apt-get install -qqy sshpass openssh-client && \
-    apt-get remove -y --auto-remove build-essential python-pip python-dev libffi-dev libssl-dev && \
+    apt-get remove -y --auto-remove build-essential python-dev libffi-dev libssl-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /etc/ansible && \
