@@ -48,7 +48,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
         libxml2-dev libxslt1-dev zlib1g-dev && \
     pip install --upgrade wheel setuptools && \
     pip install --upgrade pyyaml jinja2 pycrypto && \
-    git clone git://github.com/ansible/ansible.git --recursive && \
+    git clone https://github.com/ansible/ansible.git --recursive && \
     cd ansible && \
     pip install -r requirements.txt \
     bash -c 'source ./hacking/env-setup' && \
