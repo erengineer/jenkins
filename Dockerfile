@@ -50,7 +50,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     pip install --upgrade pyyaml jinja2 pycrypto && \
     git clone https://github.com/ansible/ansible.git --recursive && \
     cd ansible && \
-    pip install -r requirements.txt \
+    pip install -r requirements.txt && \
     bash -c 'source ./hacking/env-setup' && \
     mkdir -p $ANSIBLE_HOME && \
     mv /ansible/bin $ANSIBLE_HOME/bin && \
