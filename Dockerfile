@@ -46,7 +46,14 @@ RUN DEBIAN_FRONTEND=noninteractive \
         python-pip python-dev python-yaml \
         libffi-dev libssl-dev \
         libxml2-dev libxslt1-dev zlib1g-dev
-    
+
+# Set the working directory to /app
+WORKDIR /jenky
+
+# Copy the current directory contents into the container at /app
+ADD . /jenky
+
+# Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
 
