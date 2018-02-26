@@ -45,7 +45,11 @@ RUN DEBIAN_FRONTEND=noninteractive \
         build-essential \
         python-pip python-dev python-yaml \
         libffi-dev libssl-dev \
-        libxml2-dev libxslt1-dev zlib1g-dev
+        libxml2-dev libxslt1-dev zlib1g-dev && \
+    pip install --upgrade wheel setuptools && \
+    pip install --upgrade pyyaml jinja2 pycrypto && \
+    apt-get install -qqy sshpass openssh-client
+ 
 
 # Set the working directory to /app
 WORKDIR /jenky
