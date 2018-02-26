@@ -45,8 +45,9 @@ RUN DEBIAN_FRONTEND=noninteractive \
         build-essential \
         python-pip python-dev python-yaml \
         libffi-dev libssl-dev \
-        libxml2-dev libxslt1-dev zlib1g-dev && \
-    pip install -r requirements.txt
+        libxml2-dev libxslt1-dev zlib1g-dev
+    
+RUN pip install -r requirements.txt
 
 
 USER jenkins
