@@ -11,7 +11,7 @@ chown -R 1000 $ANSIBLE_INVENTORY
 docker build -t jenkins-ci .
 
 docker run -d --name jenkins_v2 \
-    -p 8080:8080 -p 50000:50000 \
+    -p 8888:8080 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /home/neteng/jenkins_home:/var/jenkins_home \
     -v /home/neteng/ansible:/etc/ansible \
